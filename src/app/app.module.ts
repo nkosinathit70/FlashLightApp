@@ -3,8 +3,9 @@ import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
-
+import { Flashlight } from '@ionic-native/flashlight';
 import { MyApp } from './app.component';
+import { Camera, CameraOptions } from '@ionic-native/camera';
 import { HomePage } from '../pages/home/home';
 
 @NgModule({
@@ -24,6 +25,8 @@ import { HomePage } from '../pages/home/home';
   providers: [
     StatusBar,
     SplashScreen,
+    Flashlight,
+   Camera,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
